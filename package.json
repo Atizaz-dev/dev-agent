@@ -4,10 +4,14 @@
   "description": "Autonomous development agent",
   "main": "agent.js",
   "scripts": {
-    "start": "node agent.js",
-    "dev": "nodemon agent.js"
+    "start": "node init && node agent.js",
+    "dev": "node init && nodemon agent.js"
   },
-  "keywords": ["ai", "agent", "development"],
+  "keywords": [
+    "ai",
+    "agent",
+    "development"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {

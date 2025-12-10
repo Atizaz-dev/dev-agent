@@ -111,7 +111,7 @@ Each module is:
 
 ---
 
-## 🎯 Design Decisions
+## design Decisions
 
 ### 1. **Why Parallel Task Execution?**
 
@@ -183,7 +183,7 @@ This makes the agent:
 
 ---
 
-## 💡 Key Features
+## Key Features
 
 ### Feature 1: Interactive Clarification
 
@@ -325,7 +325,7 @@ Vercel, GitHub Pages, Docker - auto-detects and deploys.
 
 ---
 
-## ⚠️ What's Still Rough
+## What's Still Rough
 
 ### ❌ No Sandbox Isolation
 The agent runs directly in the host environment. This is fine for CI/CD, but a sandboxed version would be safer for production agents.
@@ -583,7 +583,7 @@ The agent successfully fulfills all core assessment requirements:
 
 ---
 
-## 🙏 Conclusion
+##  Conclusion
 
 I built a system that automates the entire development workflow for feature implementation. It takes natural language requests and delivers tested, deployed features in 1-3 minutes.
 
