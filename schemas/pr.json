@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PullRequestMetadata",
+  "type": "object",
+  "required": ["title", "description", "branch", "changes_summary"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "PR title (max 72 chars)",
+      "maxLength": 72
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed PR description in markdown"
+    },
+    "branch": {
+      "type": "string",
+      "description": "Feature branch name",
+      "pattern": "^feature/[a-z0-9-]+$"
+    },
+    "changes_summary": {
+      "type": "array",
+      "description": "List of changes made",
+      "items": {
+        "type": "string"
+      }
+    },
+    "testing_notes": {
+      "type": "string",
+      "description": "How to test these changes"
+    },
+    "related_issues": {
+      "type": "array",
+      "description": "GitHub issue numbers",
+      "items": {
+        "type": "number"
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RequirementSpecification",
+  "type": "object",
+  "required": ["feature", "rationale", "acceptance_criteria", "files_affected", "dependencies"],
+  "properties": {
+    "feature": {
+      "type": "string",
+      "description": "Clear description of the feature to implement"
+    },
+    "rationale": {
+      "type": "string",
+      "description": "Why this feature is needed"
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "description": "List of testable criteria for completion",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "files_affected": {
+      "type": "array",
+      "description": "List of files that will be modified or created",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "NPM packages or external dependencies needed",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ui_changes": {
+      "type": "boolean",
+      "description": "Whether this involves UI modifications"
+    },
+    "api_changes": {
+      "type": "boolean",
+      "description": "Whether this involves API modifications"
+    }
+  }
+}

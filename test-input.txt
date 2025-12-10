@@ -1,0 +1,4 @@
+Add a simple contact form component to the home page
+Name, email, and message fields with required validation
+Store submissions in a database
+Yes, add error messages below each field

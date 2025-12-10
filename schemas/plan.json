@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TaskPlan",
+  "type": "object",
+  "required": ["tasks", "order", "estimated_complexity"],
+  "properties": {
+    "tasks": {
+      "type": "array",
+      "description": "Ordered list of implementation tasks",
+      "items": {
+        "type": "object",
+        "required": ["id", "description", "file", "action", "dependencies"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique task identifier"
+          },
+          "description": {
+            "type": "string",
+            "description": "What needs to be done"
+          },
+          "file": {
+            "type": "string",
+            "description": "File path to modify/create"
+          },
+          "action": {
+            "type": "string",
+            "enum": ["create", "modify", "delete"],
+            "description": "Type of file operation"
+          },
+          "dependencies": {
+            "type": "array",
+            "description": "Task IDs that must complete first",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "order": {
+      "type": "array",
+      "description": "Execution order of task IDs",
+      "items": {
+        "type": "string"
+      }
+    },
+    "estimated_complexity": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "Overall complexity assessment"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FileDiff",
+  "type": "object",
+  "required": ["file", "action", "content"],
+  "properties": {
+    "file": {
+      "type": "string",
+      "description": "Relative path to the file"
+    },
+    "action": {
+      "type": "string",
+      "enum": ["create", "modify", "delete"],
+      "description": "Operation to perform"
+    },
+    "content": {
+      "type": "string",
+      "description": "Complete new file content (for create/modify)"
+    },
+    "original_content": {
+      "type": "string",
+      "description": "Original file content (for modify only, validation)"
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Brief explanation of changes made"
+    }
+  }
+}
